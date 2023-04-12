@@ -14,6 +14,15 @@ To get started with the script provided in this repository, follow these steps:
 
 Install the required dependencies by running pip install -r requirements.txt.
 Set the OPENAI_API_KEY environment variable to your OpenAI API key. You can obtain an API key by signing up for an OpenAI account.
+For the .env file, you need to create a new file named .env in the same directory as the prepare_and_finetune.py script. In this file, add the following line:
+
+makefile
+Copy code
+OPENAI_API_KEY=your_api_key_here
+Replace your_api_key_here with your actual OpenAI API key. The Python script will use the python-dotenv package to load the API key from the .env file.
+
+Make sure not to share your .env file or commit it to a public repository, as it contains sensitive information. To avoid accidentally sharing the .env file, consider adding it to your .gitignore file if you are using Git for version control.
+
 Place your Python source code files in the same directory as the script or in its subfolders.
 Run the prepare_and_finetune.py script using python prepare_and_finetune.py. The script will process your source code files, create a dataset, upload it to OpenAI, and initiate fine-tuning.
 Once the fine-tuning is completed, you can use the fine-tuned model with your organization's codebase using the OpenAI API.

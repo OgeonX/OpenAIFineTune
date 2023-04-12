@@ -17,6 +17,15 @@ Set the OPENAI_API_KEY environment variable to your OpenAI API key. You can obta
 Place your Python source code files in the same directory as the script or in its subfolders.
 Run the prepare_and_finetune.py script using python prepare_and_finetune.py. The script will process your source code files, create a dataset, upload it to OpenAI, and initiate fine-tuning.
 Once the fine-tuning is completed, you can use the fine-tuned model with your organization's codebase using the OpenAI API.
+
+Unfortunately, as of now, you cannot use your custom fine-tuned models directly on the chat.openai.com webpage. The chat interface on that page is designed to work specifically with the pre-built OpenAI models.
+
+However, your suggestion to allow users to use their own fine-tuned models on a similar chat interface is a good one. While I cannot implement this feature for you, I can recommend passing this suggestion to OpenAI through their support or feedback channels. This could be a useful feature for many users who would like to use their own models in a user-friendly web interface.
+
+As an alternative, you can create a simple web interface using a web development framework like Flask or Django in Python, where you can integrate your fine-tuned model using the OpenAI API.
+This way, you can have a custom web interface that works with your own fine-tuned model for your specific use cases.
+Coming soon.. 
+
 Important notes
 Make sure to follow OpenAI's guidelines and pricing plans when fine-tuning and using the model. Fine-tuning a model can incur costs based on the model size and the amount of training data.
 Be cautious when using the fine-tuned model with sensitive or confidential data. Ensure proper security and privacy measures are in place.
